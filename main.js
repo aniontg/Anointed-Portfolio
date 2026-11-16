@@ -29,24 +29,24 @@ document.addEventListener("keydown", (event) => {
 
 document.querySelector("#current-year").textContent = new Date().getFullYear();
 
-const canTilt = window.matchMedia(
+const supportsTilt = window.matchMedia(
   "(hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference)",
-);
+).matches;
 
-if (canTilt.matches) {
+if (supportsTilt) {
   document
-    .querySelectorAll(".hero-img-container, .project-card")
+    .querySelectorAll(".hero-img-container, .service-card, .project-card")
     .forEach((surface) => {
       surface.addEventListener("pointermove", (event) => {
         const bounds = surface.getBoundingClientRect();
         const x = (event.clientX - bounds.left) / bounds.width;
         const y = (event.clientY - bounds.top) / bounds.height;
-        const tilt = surface.classList.contains("project-card") ? 7 : 9;
+        const intensity = surface.classList.contains("hero-img-container") ? 4 : 3;
 
         surface.style.setProperty("--pointer-x", `${x * 100}%`);
         surface.style.setProperty("--pointer-y", `${y * 100}%`);
-        surface.style.setProperty("--rotate-x", `${(0.5 - y) * tilt}deg`);
-        surface.style.setProperty("--rotate-y", `${(x - 0.5) * tilt}deg`);
+        surface.style.setProperty("--rotate-x", `${(0.5 - y) * intensity}deg`);
+        surface.style.setProperty("--rotate-y", `${(x - 0.5) * intensity}deg`);
       });
 
       surface.addEventListener("pointerleave", () => {
@@ -57,6 +57,14 @@ if (canTilt.matches) {
       });
     });
 }
+
+const contactMessage = document.querySelector("#contact-message");
+
+document.querySelectorAll(".service-link[data-service]").forEach((link) => {
+  link.addEventListener("click", () => {
+    contactMessage.value = `Hi, I’m interested in ${link.dataset.service}.`;
+  });
+});
 
 document.querySelector("#contact-form").addEventListener("submit", (event) => {
   event.preventDefault();

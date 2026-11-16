@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A concept documentation website showing a responsive interface component library." />
+    <meta name="theme-color" content="#0b1422" />
+    <title>Northstar UI — Components</title>
+    <link rel="icon" href="../../favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="concept-note">Independent concept website · Sample component library</div>
+    <header class="topbar">
+      <a class="brand" href="#home"><span class="brand-mark">✳</span> northstar<span>ui</span></a>
+      <nav aria-label="Top navigation"><a href="#components">Components</a><a href="#tokens">Foundations</a><a href="#about">About</a></nav>
+      <a class="portfolio-link" href="../../index.html#portfolio-section">Portfolio <span aria-hidden="true">↗</span></a>
+    </header>
+    <main id="main" class="docs-layout">
+      <aside class="sidebar" aria-label="Documentation sections">
+        <p>GETTING STARTED</p><a class="side-active" href="#home">Overview</a><a href="#tokens">Design tokens</a>
+        <p>LIBRARY</p><a href="#components">Buttons</a><a href="#fields">Form fields</a><a href="#feedback">Feedback cards</a>
+        <div class="sidebar-note"><span></span>Concept system<br />Version 01.0</div>
+      </aside>
+      <div class="docs-content" id="home">
+        <section class="page-intro">
+          <p class="breadcrumb">Northstar UI <span>/</span> Foundations &amp; components</p>
+          <p class="eyebrow">A small system for clear interfaces</p>
+          <h1>Build with<br /><span>consistency.</span></h1>
+          <p class="intro-copy">A concept component library for building accessible, reusable product experiences. Explore the pieces and try a few interactions.</p>
+          <div class="intro-tags"><span>Responsive by default</span><span>Keyboard friendly</span><span>Made for clarity</span></div>
+        </section>
+        <section class="token-section" id="tokens">
+          <div class="section-title"><div><p class="eyebrow">01 / FOUNDATIONS</p><h2>Color tokens</h2></div><p>Purposeful colors, paired for readable contrast.</p></div>
+          <div class="swatches">
+            <div><span class="swatch swatch-ink"></span><b>Ink / 950</b><small>#0B1422</small></div>
+            <div><span class="swatch swatch-panel"></span><b>Panel / 800</b><small>#17253A</small></div>
+            <div><span class="swatch swatch-teal"></span><b>Accent / 400</b><small>#5EEAD4</small></div>
+            <div><span class="swatch swatch-muted"></span><b>Muted / 300</b><small>#A7B6CA</small></div>
+          </div>
+        </section>
+        <section class="component-section" id="components">
+          <div class="section-title"><div><p class="eyebrow">02 / INTERACTIVE</p><h2>Buttons</h2></div><p>Clear hierarchy helps people know what to do next.</p></div>
+          <div class="component-panel button-panel">
+            <div class="panel-label"><span>BUTTON VARIANTS</span><span>TRY ONE</span></div>
+            <div class="button-row"><button class="demo-button primary" type="button" data-preview="Primary action">Primary action <span aria-hidden="true">→</span></button><button class="demo-button secondary" type="button" data-preview="Secondary action">Secondary action</button><button class="demo-button quiet" type="button" data-preview="Quiet action">Quiet action</button></div>
+            <p class="demo-status" id="button-status" aria-live="polite">Choose a button to preview its response.</p>
+          </div>
+        </section>
+        <section class="component-section" id="fields">
+          <div class="section-title"><div><p class="eyebrow">03 / INPUT</p><h2>Form fields</h2></div><p>Labels stay visible; feedback stays close to the action.</p></div>
+          <form class="component-panel field-panel" id="demo-form">
+            <label for="demo-email">Work email</label><input id="demo-email" name="email" type="email" placeholder="name@company.com" required />
+            <div class="field-help"><span>We’ll only use this for the demo response.</span><span>0 / 80</span></div>
+            <button class="demo-button primary" type="submit">Preview form state <span aria-hidden="true">→</span></button>
+            <p class="demo-status" id="form-status" aria-live="polite">Enter an email to see the success state.</p>
+          </form>
+        </section>
+        <section class="component-section" id="feedback">
+          <div class="section-title"><div><p class="eyebrow">04 / FEEDBACK</p><h2>Status cards</h2></div><p>Useful updates that are easy to scan and understand.</p></div>
+          <div class="status-card"><span class="status-icon" aria-hidden="true">✓</span><div><b>All systems operational</b><p>This example card communicates a clear, positive status.</p></div><span class="status-label">JUST NOW</span></div>
+        </section>
+        <section class="component-section" id="about">
+          <div class="section-title"><div><p class="eyebrow">ABOUT THIS CONCEPT</p><h2>Small system, clear patterns.</h2></div><p>Northstar UI is an original sample design-system concept, not a released product.</p></div>
+        </section>
+        <footer><span>Northstar UI · Concept documentation</span><a href="../../index.html#portfolio-section">← Back to portfolio</a></footer>
+      </div>
+    </main>
+  </body>
+</html>
